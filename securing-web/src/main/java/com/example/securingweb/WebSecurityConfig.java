@@ -40,5 +40,8 @@ public class WebSecurityConfig {
                         .build();
 
         return new InMemoryUserDetailsManager(user);
+        /**
+         * @todo Add encryption
+         */
     }
 }
