@@ -9,6 +9,10 @@ barriers to force our users in signing-in before they can access a particular re
 To create and secure web applications, we need to secure endpoints, and to do that, we need to configure and set 
 Spring security. 
 
+This is an example project to utilize the Spring's framework of providing securing
+endpoints which allow HTTPS traffic. Moreover, we allow the use of Beans and Configuration
+files which allow us to easily setup the security of a web application.
+
 >  If Spring Security is on the classpath, Spring Boot automatically secures all HTTP endpoints with “basic” authentication.
 
 # Providing Encryption
