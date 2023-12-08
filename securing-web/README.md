@@ -41,3 +41,48 @@ what does it need that email address for?
 > If you need to know the email address for purposes which cannot be satisfied by a hash, then it's not a good idea to 
 > store just a hash. If for example you need to send emails to your users, chances are you cannot do that with just a hash.
 
+
+# Some important notes
+<hr>
+
+## Configuration annotation
+
+<code>@Configuration</code> annotation allows us to indicate that a class is declared to use one ore more <code>@Bean</code>
+methods, and it will be processed by the Spring Container at runtime to generate <code>@Bean</code> classes. 
+Classes which have this annotation can be used as an external configuration including beans in one place.
+
+Furthermore, using this annotation can help setup Spring security where most of the user credentials and authentication
+are configured.
+
+> The <code>@Configuration</code> annotation in Spring is used to indicate that a class declares one or more 
+> <code>@Bean</code> methods and may be processed by the Spring container to generate bean definitions and service requests
+> for those beans at runtime.
+
+
+## Bean annotation
+
+<code>@Bean</code> these are snippets of methods found within a @Configuration class which is used to define 
+Spring Beans.
+
+> A class annotated with <code>@Configuration</code> is often used to define Spring beans. 
+> Methods annotated with <code>@Bean</code> within this class provide bean definitions.
+
+> The <code>@Bean</code> annotation on a method indicates that the method will return an object that should be registered 
+> as a bean within the Spring application context.
+
+
+## Spring Container Processing 
+
+Allows the application to create a Spring Bean definition for each class that is annotated with <code>@Configuration</code>. 
+Then, it creates Spring processes each method annotated with <code>@Bean</code>.
+
+> When Spring sees a class annotated with @Configuration, it processes the class to create a Spring bean definition 
+> for each @Bean method in the class.
+
+## Dependency Injection
+
+This allows us to make code 'modular' and make classes independent and loosely coupled against other classes. Moreover,
+Dependency injection can make writing code much easier by using inserting or injecting code into another classes. 
+
+> In Spring, the objects returned by <code>@Bean methods</code> can be injected into other beans, providing a way to manage 
+> dependencies within the Spring application context.
